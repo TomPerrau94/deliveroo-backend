@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-app.get("/ded", (req, res) => {
+app.get("/data", (req, res) => {
   return res.status(200).json({
     restaurant: {
       path: "Le Pain Quotidien",
