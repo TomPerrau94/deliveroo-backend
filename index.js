@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/ded", (req, res) => {
   return res.status(200).json({
     restaurant: {
       path: "Le Pain Quotidien",
@@ -449,6 +449,10 @@ app.get("/", (req, res) => {
       { name: "Couverts", meals: [] },
     ],
   });
+});
+
+app.get("*", (req, res) => {
+  res.status(200).json({ message: "App started" });
 });
 
 app.listen(process.env.PORT || 3200, () => {
